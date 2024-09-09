@@ -3,5 +3,5 @@ def no_c(my_string):
     str = ""
     for i in my_string:
         if i != 'c' and i != 'C':
-            str = str + 1
+            str = str + i
             return str
