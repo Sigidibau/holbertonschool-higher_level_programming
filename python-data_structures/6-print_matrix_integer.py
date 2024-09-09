@@ -1,4 +1,4 @@
-#!/usr/bin/pyhont3
+#!/usr/bin/pyhon3
 def print_matrix_integer(matrix=[[]]):
     for i in matrix:
         for x in i:
