@@ -4,7 +4,7 @@ def best_score(a_dictionary):
         return None
     i = 0
     best = ''
-    for x, y in a_dictionary.item():
+    for x, y in a_dictionary.items():
         if y > i:
             i = y
             best = x
