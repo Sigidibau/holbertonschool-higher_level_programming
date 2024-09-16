@@ -1,7 +1,13 @@
 #!/usr/bin/python3
 
 class Square:
-    """represent a Square
-    Attributes: none
+    """
+    Represents a square.
+
+    This is an empty class definition for a square. It does not include
+    any attributes or methods.
+
+    Attributes:
+        None
     """
     pass
