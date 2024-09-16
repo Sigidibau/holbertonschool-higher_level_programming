@@ -4,5 +4,3 @@ class Square:
     """Class: is a Square
     Args: none
     """
-s = Square()
-print(s)
