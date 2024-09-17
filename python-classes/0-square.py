@@ -1,9 +1,5 @@
 #!/usr/bin/python3
+"""creating an empty class"""
 class Square:
-    """
-    Represents a square.
-
-    This is an empty class definition for a square. It does not include
-    any attributes or methods.
-    """
+    """creating an empty Square class"""
     pass
