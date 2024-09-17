@@ -13,3 +13,4 @@ class Square:
             size (int): private instance attribute.
         """
         self.__size = size
+        
