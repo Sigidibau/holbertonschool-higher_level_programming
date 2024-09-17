@@ -6,8 +6,5 @@ class Square:
 
     This is an empty class definition for a square. It does not include
     any attributes or methods.
-
-    Attributes:
-        None
     """
     pass
