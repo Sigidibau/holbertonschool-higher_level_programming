@@ -77,10 +77,15 @@ class Square:
         return (self.__size ** 2)
 
     def my_print(self):
-        """Prints the square using '#' characters."""
+        """Prints the square using '#' characters with correct position."""
         if self.__size == 0:
             print()
             return
 
+        # Print vertical offset
+        for _ in range(self.__position[1]):
+            print()
+
+        # Print the square
         for _ in range(self.__size):
-            print('#' * self.__size)
+            print(' ' * self.__position[0] + '#' * self.__size)
