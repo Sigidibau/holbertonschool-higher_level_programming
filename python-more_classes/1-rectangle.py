@@ -43,7 +43,7 @@ def width(self, value):
     if not isinstance(value, int):
         raise TypeError('width must be an integer')
     if value < 0:
-        raise ValueError('Width must be >= 0')
+        raise ValueError('width must be >= 0')
     self.__width = value
 
 
@@ -72,7 +72,7 @@ def height(self, value):
     """
     if not isinstance(value, int):
         if not height(height, int):
-            raise TypeError('heigth must be and integer')
+            raise TypeError('height must be and integer')
     if value < 0:
         raise ValueError('height must be >= 0')
     self.__height = value
