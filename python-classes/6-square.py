@@ -9,12 +9,16 @@ class Square:
         """Initialize a square.
 
         Args:
-            size (int, optional): The size of the square. Defaults to 0.
-            position (tuple, optional): The position of the square. Defaults to (0, 0).
+            size (int, optional): The size of the square.
+            Defaults to 0.
+            position (tuple, optional): The position of the square.
+            Defaults to (0, 0).
 
         Raises:
-            TypeError: if size isn't an integer or if position isn't a tuple of 2 integers.
-            ValueError: if size < 0 or if any coordinate in position is negative.
+            TypeError: if size isn't an integer or
+            if position isn't a tuple of 2 integers.
+            ValueError: if size < 0 or
+            if any coordinate in position is negative.
         """
         self.size = size
         self.position = position
