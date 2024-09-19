@@ -114,6 +114,5 @@ class Rectangle:
         """
         if self.width is 0 or self.height is 0:
             return ("")
-        string = ('#' * self.__width + '\n') * (
-            self.__height - 1) + ('#' * self.__width)
+        string = ["#" * self.__width for _ in range(self.__height)]
         return string
