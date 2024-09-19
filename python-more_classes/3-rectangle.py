@@ -102,7 +102,7 @@ class Rectangle:
             return 0
         return (self.width + self.height) * 2
 
-    def __STR__(self):
+    def __str__(self):
         """
         Returns a string representation of
         the rectangle using the character '#'.
@@ -114,5 +114,6 @@ class Rectangle:
         """
         if self.__width is 0 or self.__height is 0:
             return ("")
+
         string = ["#" * self.__width for _ in range(self.__height)]
         return "\n".join(string)
