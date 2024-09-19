@@ -119,8 +119,8 @@ class Rectangle:
         """
         if self.__width is 0 or self.__height is 0:
             return ("")
-
-        string = ["#" * self.__width for _ in range(self.__height)]
+        custom_symbol = str(self.print_symbol)
+        string = [custom_symbol * self.__width for _ in range(self.__height)]
         return "\n".join(string)
 
     def __repr__(self):
