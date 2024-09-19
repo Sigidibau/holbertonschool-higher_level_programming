@@ -125,4 +125,5 @@ class Rectangle:
 
     def __del__(self):
         """Destructor for the Rectangle class."""
-        print(Bye rectangle...)
+
+        print('Bye rectangle...')
