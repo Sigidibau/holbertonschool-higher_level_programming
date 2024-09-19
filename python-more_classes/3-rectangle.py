@@ -112,7 +112,7 @@ class Rectangle:
         Returns:
             str: String representation of the rectangle.
         """
-        if self.width is 0 or self.height is 0:
+        if self.__width is 0 or self.__height is 0:
             return ("")
         string = ["#" * self.__width for _ in range(self.__height)]
         return string
