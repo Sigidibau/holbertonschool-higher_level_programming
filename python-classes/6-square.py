@@ -23,6 +23,11 @@ class Square:
         self.size = size
         self.position = position
 
+    @property
+    def size(self):
+        """Get the size of the square."""
+        return (self.__size)
+
     @size.setter
     def size(self, value):
         """Set the size of the square.
@@ -41,14 +46,9 @@ class Square:
         self.__size = value
 
     @property
-    def size(self):
-        """Get the size of the square."""
-        return self.__size
-
-    @property
     def position(self):
         """Get the position of the square."""
-        return self.__position
+        return (self.__position)
 
     @position.setter
     def position(self, value):
@@ -75,12 +75,12 @@ class Square:
         Returns:
             int: The area of the square.
         """
-        return self.__size ** 2
+        return (self.__size) ** 2
 
     def my_print(self):
         """Prints the square using '#' characters with correct position."""
         if self.__size == 0:
-            print()
+            print("")
             return
 
         # Print vertical offset
