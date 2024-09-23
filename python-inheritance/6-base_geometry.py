@@ -15,6 +15,7 @@ Methods:
 
 
 class BaseGeometry:
+    """Geometry class"""
     def area(self):
         """Calculate the area of the shape.
 
