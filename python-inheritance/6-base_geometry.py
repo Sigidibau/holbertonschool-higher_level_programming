@@ -26,4 +26,4 @@ class BaseGeometry:
         Raises:
             Exception: If called directly without being overridden.
         """
-    raise Exception("area() is not implemented")
+        raise Exception("area() is not implemented")
