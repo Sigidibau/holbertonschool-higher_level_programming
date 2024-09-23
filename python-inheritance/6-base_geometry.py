@@ -1,10 +1,16 @@
 #!/usr/bin/python3
-"""BaseGeometry class that defines an interface for geometric shapes.
+"""BaseGeometry class for geometric shapes.
 
-The BaseGeometry class is an abstract class that provides a blueprint
-for geometric shapes. It includes an abstract method `area`, which must
-be implemented by any subclass. This class is intended to be
-inherited by other classes that represent specific geometric figures.
+This abstract class defines a blueprint for geometric shapes. It requires
+subclasses to implement the `area` method, which should calculate the area
+of the specific shape. The class cannot be instantiated directly.
+
+Attributes:
+    None
+
+Methods:
+    area() -- Raises an Exception indicating that the method is
+    not implemented.
 """
 
 
