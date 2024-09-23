@@ -12,8 +12,12 @@ class BaseGeometry:
     def area(self):
         """Calculate the area of the shape.
 
-        This method should be overridden in subclasses. If called
-        directly, it raises an Exception indicating that the method
-        is not implemented.
+        This method is meant to be overridden in subclasses to provide
+        specific implementations for calculating the area. If called
+        on an instance of BaseGeometry, it raises an Exception indicating
+        that the method is not implemented.
+
+        Raises:
+            Exception: If called directly without being overridden.
         """
     raise Exception("area() is not implemented")
