@@ -31,20 +31,20 @@ class BaseGeometry:
 
     def integer_validator(self, name, value):
         """
-    Validate that the given value is a positive integer.
+        Validate that the given value is a positive integer.
 
-    Parameters:
-    name (str): The name of the variable being validated,
-    used for error messages.
-    value (any): The value to be validated.
+        Parameters:
+            name (str): The name of the variable being validated,
+            used for error messages.
+            value (any): The value to be validated.
 
-    Raises:
-    TypeError: If `value` is not an integer.
-    ValueError: If `value` is less than or equal to 0.
+        Raises:
+            TypeError: If `value` is not an integer.
+            ValueError: If `value` is less than or equal to 0.
 
-    Returns:
-    int: The validated integer value.
-    """
+        Returns:
+            int: The validated integer value.
+        """
         if not isinstance(value, int):
             raise TypeError('{:s} must be an integer'.format(name))
         if value <= 0:
