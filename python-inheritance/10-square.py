@@ -6,7 +6,7 @@ Class Square
 """
 
 
-BaseGeometry = __import__('9-rectangle.py').BaseGeometry
+Rectangle = __import__('9-rectangle.py').Rectangle
 """superclass import """
 
 
