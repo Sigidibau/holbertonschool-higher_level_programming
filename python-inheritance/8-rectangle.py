@@ -53,7 +53,7 @@ class BaseGeometry:
         return value
 
 
-class Rectangle:
+class Rectangle(BaseGeometry):
     """Class Rectangle inherits from BaseGeometry"""
     def __init__(self, width, height):
         super().integer_validator = ('width', width)
