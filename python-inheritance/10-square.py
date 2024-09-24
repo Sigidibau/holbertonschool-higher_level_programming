@@ -2,6 +2,7 @@
 """
 Class BaseGeometry
 Class Rectangle
+Class Square
 """
 
 
