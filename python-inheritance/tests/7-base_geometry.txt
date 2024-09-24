@@ -1,92 +1,85 @@
 The ``7-base_geometry`` module
-==============================
+======================
 
-Using ``BaseGeometry``
+Using the ``BaseGeometry`` class
 ----------------------
 
-Import the class:
+This is an example text file in reStructuredText format.  First import
+``BaseGeometry`` from the ``7-base_geometry`` module:
 
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-Now test it:
-
+Now use it:
+    
     >>> bg = BaseGeometry()
+    >>> bg.integer_validator("width", 4)
+    4
 
-Test the area() method:
-
-    >>> bg.area()
+    Test second parameter is negative
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("height", -4)
     Traceback (most recent call last):
-    Exception: area() is not implemented
+    ValueError: width must be greater than 0
 
-Test integer_validator() with valid inputs:
+    Test parameter is an integer
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator(8, 4)
+    4
 
-    >>> bg.integer_validator("my_int", 12)
-    >>> bg.integer_validator("width", 89)
-
-Test integer_validator() with invalid types:
-
-    >>> bg.integer_validator("name", "John")
+    Test only 1 parameter and int
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator(88)
     Traceback (most recent call last):
-    TypeError: name must be an integer
+    TypeError: integer_validator() missing 1 required positional parameter: 'value'
 
-    >>> bg.integer_validator("age", 0)
-    Traceback (most recent call last):
-    ValueError: age must be greater than 0
-
-    >>> bg.integer_validator("distance", -4)
-    Traceback (most recent call last):
-    ValueError: distance must be greater than 0
-
-Test integer_validator() with non-integer types:
-
-    >>> bg.integer_validator("average", 7.8)
-    Traceback (most recent call last):
-    TypeError: average must be an integer
-
-    >>> bg.integer_validator("boolean", True)
-    Traceback (most recent call last):
-    TypeError: boolean must be an integer
-
-    >>> bg.integer_validator("complex", 1+2j)
-    Traceback (most recent call last):
-    TypeError: complex must be an integer
-
-Test integer_validator() with no arguments:
-
+    Testing no parameter
+    >>> bg = BaseGeometry()
     >>> bg.integer_validator()
     Traceback (most recent call last):
-    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+    TypeError: integer_validator() missing 2 required positional parameters: 'name' and 'value'
 
-Test integer_validator() with only one argument:
+    Test empty string
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("", 4)
+    4
 
-    >>> bg.integer_validator("age")
+    Test valid int
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("my_int", 8)
+    8
+
+    Test second parameter is 0
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("width", 0)
     Traceback (most recent call last):
-    TypeError: integer_validator() missing 1 required positional argument: 'value'
+    ValueError: width must be greater than 0
 
-Test integer_validator() with too many arguments:
-
-    >>> bg.integer_validator("age", 18, 19)
+    Test if the second parameter is a float
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("width", 5.9)
     Traceback (most recent call last):
-    TypeError: integer_validator() takes 3 positional arguments but 4 were given
+    TypeError: width must be an integer
 
-Test integer_validator() with additional non-integer types:
-
-    >>> bg.integer_validator("age", (4,))
+    Test string as parameters:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("width", "betty")
     Traceback (most recent call last):
-    TypeError: age must be an integer
+    TypeError: width must be an integer
 
-    >>> bg.integer_validator("age", [3])
+    Test for cannot convert float NaN to integer:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("width", float("NaN"))
     Traceback (most recent call last):
-    TypeError: age must be an integer
+    TypeError: width must be an integer
 
-    >>> bg.integer_validator("age", True)
+    Test 1 parameter and it's a string:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("jjk")
     Traceback (most recent call last):
-    TypeError: age must be an integer
+    TypeError: integer_validator() missing 1 required positional parameter: 'value'
 
-    >>> bg.integer_validator("age", {3, 4})
+    Test both parameters are empty strings
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("", "")
     Traceback (most recent call last):
-    TypeError: age must be an integer
-
-    >>> bg.integer_validator("age", None)
-    Traceback (most recent call last):
-    TypeError: age must be an integer
+    TypeError:  must be an integer
