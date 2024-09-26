@@ -38,11 +38,11 @@ class Circle(Shape):
 class Rectangle(Shape):
     """Class representing a rectangle."""
 
-    def __init__(self, width, heigth):
+    def __init__(self, width, height):
         """Initialize the rectangle with width and height."""
 
         self.width = width
-        self.heigth = heigth
+        self.height = height
 
     def area(self):
         """Calculate the area of the rectangle."""
@@ -51,10 +51,11 @@ class Rectangle(Shape):
 
     def perimeter(self):
         """Calculate the perimeter of the rectangle."""
+
         pass
 
 
-def shape_info():
+def shape_info(Shape):
     """Print the area and perimeter of a given shape.
 
     Args:
