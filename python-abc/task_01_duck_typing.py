@@ -42,7 +42,7 @@ class Circle(Shape):
 class Rectangle(Shape):
     """Class representing a rectangle."""
 
-    def __init__(self, width, height):
+    def __init__(self, width=0, height=0):
         """Initialize the rectangle with width and height."""
 
         self.width = width
