@@ -64,7 +64,9 @@ def shape_info(Shape):
 
     Args:
         shape (Shape): An instance of a Shape subclass.
-    """
 
+    This function calls the `area` and `perimeter` methods
+    of the given shape and prints their values to the console.
+    """
     print(f"Area: {Shape.area()}")
     print(f"Perimeter: {Shape.perimeter()}")
