@@ -21,7 +21,7 @@ class Bird:
         print("The bird lives in the sky")
 
 
-class FlayingFish(Fish, Bird):
+class FlyingFish(Fish, Bird):
     """FlyingFish class that inherits from both Fish and Bird."""
 
     def fly(self):
@@ -32,3 +32,10 @@ class FlayingFish(Fish, Bird):
 
     def habitat(self):
         print("The flying fish lives both in water and the sky!")
+
+ff = FlyingFish()
+
+ff.fly()
+ff.swim()
+ff.habitat()
+print(FlyingFish.mro())
