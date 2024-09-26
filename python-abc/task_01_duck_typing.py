@@ -13,6 +13,7 @@ class Shape(ABC):
         """Calculate the area of the shape."""
         pass
 
+    @abstractmethod
     def perimeter(self):
         """Calculate the perimeter of the shape."""
         pass
@@ -28,11 +29,13 @@ class Circle(Shape):
 
     def area(self):
         """Calculate the area of the circle."""
-        pass
+
+        return 3.14 * (self.radius ** 2)
 
     def perimeter(self):
         """Calculate the perimeter (circumference) of the circle."""
-        pass
+
+        return 2 * 3.14 * self.radius
 
 
 class Rectangle(Shape):
@@ -47,12 +50,12 @@ class Rectangle(Shape):
     def area(self):
         """Calculate the area of the rectangle."""
 
-        pass
+        return self.width * self.height
 
     def perimeter(self):
         """Calculate the perimeter of the rectangle."""
 
-        pass
+        return 2 * (self.width + self.height)
 
 
 def shape_info(Shape):
