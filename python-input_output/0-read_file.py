@@ -10,5 +10,6 @@ def read_file(filename=""):
                         Defaults to an empty string, which should be replaced
                         with a valid file path when calling the function.
     """
-    with open('workfile', 'w', encoding="utf-8") as f:
-        read_file = f.read
+    with open(filename, 'r', encoding="utf-8") as f:
+        read_data = f.read()
+        print(read_data, end="")
