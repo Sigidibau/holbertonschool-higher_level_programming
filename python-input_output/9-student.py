@@ -13,7 +13,6 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-
     def to_json(self):
         """Converts the Student instance to a JSON-compatible dictionary.
 
