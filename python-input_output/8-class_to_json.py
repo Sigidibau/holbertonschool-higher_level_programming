@@ -2,9 +2,6 @@
 """Clas to json"""
 
 
-import json
-
-
 def class_to_json(obj):
     """
     Convert a class instance to a dictionary representation.
