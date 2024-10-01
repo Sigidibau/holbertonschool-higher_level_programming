@@ -1,4 +1,12 @@
 #!/usr/bin/python3
+"""
+This module provides a function to read the contents of a text file.
+
+The `read_file` function opens a specified file in read mode,
+reads its content,
+and returns it as a string. This can be useful for various
+text processing tasks.
+"""
 
 
 def read_file(filename=""):
