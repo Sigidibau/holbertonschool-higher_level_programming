@@ -14,11 +14,11 @@ class Student:
         self.age = age
 
 
-def to_json(self):
-    """Converts the Student instance to a JSON-compatible dictionary.
+    def to_json(self):
+        """Converts the Student instance to a JSON-compatible dictionary.
 
         Returns:
             dict: A dictionary representation of
             the Student instance's attributes.
-    """
-    return self.__dict__
+        """
+        return self.__dict__
