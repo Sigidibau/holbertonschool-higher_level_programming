@@ -18,13 +18,12 @@ class CustomObject:
         self.name = name
         self.age = age
         self.is_student = is_student
-        
-        
+
     def displa(self):
         print(f"Name: {self.name}")
         print(f"Age: {self.age}")
         print(f"Is Student: {self.is_student}")
-        
+
     def serialize(self, filename):
         try:
             with open(filename, 'wb') as f:
@@ -32,7 +31,7 @@ class CustomObject:
         except Exception as e:
             print(f"Error serializing the object: {e}")
         return None
-    
+
     @classmethod
     def deserialize(cls, filename):
         try:
