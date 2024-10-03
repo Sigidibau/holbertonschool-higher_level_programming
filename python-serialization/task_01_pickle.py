@@ -1,10 +1,20 @@
 #!/usr/bin/python3
-
+"""Define a class CustomObject."""
 import pickle
 
 
 class CustomObject:
+    """Custom Python class."""
+
     def __init__(self, name, age, is_student):
+        """
+        Constructor for CustomObject.
+
+        Args:
+            name (str): The name of the person being represented.
+            age (int): The age of the person being represented.
+            is_student (bool): Whether or not the person is a student.
+        """
         self.name = name
         self.age = age
         self.is_student = is_student
