@@ -20,11 +20,32 @@ class CustomObject:
         self.is_student = is_student
 
     def displa(self):
+        """
+        Print the attributes of the object in a human-readable format.
+
+        This method can be used to inspect the contents of the object in a
+        user-friendly way.
+        """
         print(f"Name: {self.name}")
         print(f"Age: {self.age}")
         print(f"Is Student: {self.is_student}")
 
     def serialize(self, filename):
+        """
+        Serialize the object to a file.
+
+        This method will serialize the object instance to the given
+        filename. It will return None if an error occurs, otherwise
+        it will return the serialized object.
+
+        Args:
+            filename (str): The name of the file to serialize the object
+                            to.
+
+        Returns:
+            object or None: The serialized object if successful, otherwise
+                            None.
+        """
         try:
             with open(filename, 'wb') as f:
                 pickle.dump(self, f)
@@ -34,6 +55,19 @@ class CustomObject:
 
     @classmethod
     def deserialize(cls, filename):
+        """
+        Deserialize the object from a file.
+
+        This method will deserialize an object from the given filename.
+
+        Args:
+            filename (str): The name of the file to deserialize the object
+                            from.
+
+        Returns:
+            object or None: The deserialized object if successful, otherwise
+                            None.
+        """
         try:
             with open(filename, 'rb') as file:
                 return pickle.load(file)
