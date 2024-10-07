@@ -19,7 +19,7 @@ class CustomObject:
         self.age = age
         self.is_student = is_student
 
-    def displa(self):
+    def display(self):
         """
         Print the attributes of the object in a human-readable format.
 
@@ -47,11 +47,11 @@ class CustomObject:
                             None.
         """
         try:
-            with open(filename, 'wb') as f:
-                pickle.dump(self, f)
+            with open(filename, 'wb') as file:
+                pickle.dump(self, file)
         except Exception as e:
-            print(f"Error serializing the object: {e}")
-        return None
+            print(f"Error serializing object: {e}")
+            return None
 
     @classmethod
     def deserialize(cls, filename):
@@ -75,5 +75,5 @@ class CustomObject:
             print(f"File not found: {filename}")
             return None
         except Exception as e:
-            print(f"Error deserializing the object: {e}")
+            print(f"Error deserializing object: {e}")
             return None
