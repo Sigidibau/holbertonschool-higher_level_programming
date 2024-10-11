@@ -22,14 +22,14 @@ def fetch_and_save_posts():
         posts = r.json()
         d_list = []
 
-    for posts in posts:
+    for post in posts:
         d_list.append({
-            'id': posts['id'],
-            'title': posts['title'],
-            'body': posts['body']
+            'id': post['id'],
+            'title': post['title'],
+            'body': post['body']
         })
 
-        with open('posts.csv', 'w', encoding='utf-8') as file:
+        with open('post.csv', 'w', encoding='utf-8') as file:
                 writer = csv.DictWriter(file, fieldnames=['id', 'title', 'body'])
                 writer.writeheader()
                 writer.writerows(d_list)
