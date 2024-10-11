@@ -17,7 +17,6 @@ def fetch_and_print_posts():
 
 def fetch_and_save_posts():
     r = requests.get("https://jsonplaceholder.typicode.com/posts")
-    print(f"Status Code for saving: {r.status_code}")
     if r.status_code == 200:
         posts = r.json()
         d_list = []
@@ -29,7 +28,7 @@ def fetch_and_save_posts():
             'body': post['body']
         })
 
-        with open('post.csv', 'w', encoding='utf-8') as file:
+        with open('posts.csv', 'w', encoding='utf-8') as file:
                 writer = csv.DictWriter(file, fieldnames=['id', 'title', 'body'])
                 writer.writeheader()
                 writer.writerows(d_list)
