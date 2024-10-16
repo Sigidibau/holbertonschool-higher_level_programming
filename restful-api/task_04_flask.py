@@ -8,17 +8,21 @@ app = Flask(__name__)
 
 users = {"jane": {"name": "Jane", "age": 28, "city": "Los Angeles"}}
 
+
 @app.route("/")
 def home():
-    return 'Welcome to the Flask API!!'
+    return 'Welcome to the Flask API!'
+
 
 @app.route('/data')
 def get_data():
     return jsonify(list(users.keys()))
 
+
 @app.route('/status')
 def status():
     return 'ok'
+
 
 @app.route('/users/<username>')
 def get_user(username):
@@ -38,5 +42,6 @@ def add_user():
     users[username] = data
     return jsonify({"message": "User added", "user": data}), 201
 
-if __name__ == "__main__": 
-    app.run()
+
+if __name__ == "__main__":
+    app.run(debug=True)
