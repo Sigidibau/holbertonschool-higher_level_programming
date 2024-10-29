@@ -22,7 +22,7 @@ if __name__ == "__main__":
     cur = conn.cursor()
     cur.execute(f"SELECT c.id, c.name, st.name \
         FROM cities AS c \
-        JOIN satates AS st \
+        JOIN states AS st \
             ON c.state_id = st.id \
         ORDER BY c.id")
     query_rows = cur.fetchall()
