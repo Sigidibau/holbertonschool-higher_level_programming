@@ -21,6 +21,6 @@ if __name__ == "__main__":
     state_obejects = session.query(State).order_by(State.id).all()
 
     for stateobjs in state_obejects:
-        print("{}: {}".format(state_obejects.id, stateobjs.name))
+        print("{}: {}".format(stateobjs.id, stateobjs.name))
 
     session.close()
