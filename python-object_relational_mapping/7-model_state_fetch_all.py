@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""list all state objects"""
 
 import sys
 from sqlalchemy import create_engine
@@ -15,11 +16,11 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     Session = sessionmaker(bind=engine)
-    Session = Session()
+    session = Session()
 
-    state_obejects = Session.query(state).order_by(State.id).all()
+    state_obejects = session.query(State).order_by(State.id).all()
 
     for stateobjs in state_obejects:
         print("{}: {}".format(state_obejects.id, stateobjs.name))
 
-    Session.close()
+    session.close()
