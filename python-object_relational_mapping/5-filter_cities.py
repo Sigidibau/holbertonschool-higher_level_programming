@@ -21,7 +21,7 @@ if __name__ == "__main__":
         charset="utf8"
     )
     cur = conn.cursor()
-    cur.execute(f"SELECT c.id, c.name, st.name \
+    cur.execute(f"SELECT c.name \
         FROM cities AS c \
         JOIN states AS st \
             ON c.state_id = st.id \
