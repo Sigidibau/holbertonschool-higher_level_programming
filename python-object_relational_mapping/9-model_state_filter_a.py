@@ -22,7 +22,7 @@ if __name__ == "__main__":
     stateobject = session.query(State).filter(
         State.name.like('%a')).order_by(State.id).all()
 
-    for stateobject in stateobj:
+    for stateobj in stateobject:
         print('{}: {}'.format(stateobject.id, stateobject.name))
 
     session.close()
