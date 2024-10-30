@@ -23,6 +23,6 @@ if __name__ == "__main__":
         State.name.like('%a')).order_by(State.id).all()
 
     for stateobj in stateobject:
-        print('{}: {}'.format(stateobject.id, stateobject.name))
+        print('{}: {}'.format(stateobj.id, stateobj.name))
 
     session.close()
