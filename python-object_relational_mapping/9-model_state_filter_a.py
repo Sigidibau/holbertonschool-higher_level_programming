@@ -21,9 +21,8 @@ if __name__ == "__main__":
 
     stateobject = session.query(State).filter(
         State.name.like('%a')).order_by(State.id).all()
-    if stateobject:
+
+    for stateobject in stateobj:
         print('{}: {}'.format(stateobject.id, stateobject.name))
-    else:
-        print("Nothing")
 
     session.close()
