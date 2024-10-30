@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""list state object by argument"""
 
 import sys
 from sqlalchemy import create_engine
